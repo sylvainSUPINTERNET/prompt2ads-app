@@ -5,13 +5,13 @@ import { Customer } from "../customer/customer";
 
 @Component({
   selector: 'app-home',
-  imports: [Customer],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
   
-  @ViewChild('box') box!: ElementRef;
+  @ViewChild('boxTitle') boxTitle!: ElementRef;
   
   protected readonly title = signal('prompt2ads-app');
 
@@ -28,7 +28,7 @@ export class Home {
 
     ngAfterViewInit() {
       if (isPlatformBrowser(this.platformId)) {
-        animate(this.box.nativeElement, 
+        animate(this.boxTitle.nativeElement, 
           { opacity: [0, 1], y: [-50, 0] },
           { duration: 0.6 }
         );
