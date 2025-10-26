@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
+import { Component, effect, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { animate } from 'motion';
 import { Customer } from "../customer/customer";
 
@@ -15,7 +15,16 @@ export class Home {
   
   protected readonly title = signal('prompt2ads-app');
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  user = signal<null | {id:string}>(null);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    effect(async () => {
+      const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+      setTimeout( async () => {
+        this.user.set(await res.json());
+      }, 2000)
+    });
+  }
 
     ngAfterViewInit() {
       if (isPlatformBrowser(this.platformId)) {

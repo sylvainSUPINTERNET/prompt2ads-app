@@ -6,6 +6,12 @@
   <div #box>
     <p>my box</p>
 
+    @defer (when user()) {
+      <div>{{ user()!.id }}</div>
+    } @placeholder {
+      <div>Loading user...</div>
+    }
+
     <app-customer></app-customer>
   </div>
 </div>
