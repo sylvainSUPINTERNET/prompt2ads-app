@@ -1,0 +1,29 @@
+/* @keyframes flow {
+  0% { left: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.animate-flow {
+  animation: flow 2s linear infinite;
+} */
+
+@keyframes flow-vertical {
+  0%   { top: 0; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.animate-flow-vertical {
+  animation: flow-vertical 2s linear infinite;
+}
+
+@keyframes gloss {
+  0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
+  20% { opacity: 0.6; }
+  50% { transform: translateX(100%) rotate(25deg); opacity: 0; }
+  100% { transform: translateX(100%) rotate(25deg); opacity: 0; }
+}
+.animate-gloss {
+  animation: gloss 4s ease-in-out infinite;
+}
