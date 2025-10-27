@@ -28,7 +28,8 @@ export class Home {
 
     ngAfterViewInit() {
       if (isPlatformBrowser(this.platformId)) {
-        animate(this.boxTitle.nativeElement, 
+        animate(
+          this.boxTitle.nativeElement, 
           { opacity: [0, 1], y: [-50, 0] },
           { duration: 0.6 }
         );
