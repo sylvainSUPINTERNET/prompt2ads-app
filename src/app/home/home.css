@@ -14,9 +14,11 @@
   90%  { opacity: 1; }
   100% { top: 100%; opacity: 0; }
 }
+
 .animate-flow-vertical {
-  animation: flow-vertical 2s linear infinite;
+  animation: flow-vertical 3s linear infinite;
 }
+
 
 @keyframes gloss {
   0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
