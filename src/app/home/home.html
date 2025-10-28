@@ -4,6 +4,16 @@
 
   <!-- content -->
   <div>
+
+    <div #boxTitle>
+      <div class="flex items-center justify-center">
+        <h1 class="mb-4 text-4xl font-semibold tracking-tighter text-center md:text-7xl text-slate-100 mt-[0.5em]">From Prompt to Google Ads</h1>
+      </div>
+      <div>
+          <p class="text-slate-200 text-center text-lg md:text-xl mt-[0.6em]">Generate full Google Ads campaigns in seconds</p>
+      </div>
+    </div>
+
     <div class="flex justify-center mt-[3em] p-2">
       <div class="
                   flex items-center gap-[0.5em]
@@ -22,104 +32,129 @@
       </div>
     </div>
 
-    <div #boxTitle>
-      <div class="flex items-center justify-center">
-        <h1 class="mb-4 text-4xl font-semibold tracking-tighter text-center md:text-7xl text-slate-100 mt-[0.5em]">From Prompt to Google Ads</h1>
-      </div>
-      <div>
-          <p class="text-slate-200 text-center text-lg md:text-xl mt-[0.6em]">Generate full Google Ads campaigns in seconds</p>
-      </div>
-    </div>
 
 
 
 
-    <div class="flex flex-col items-center justify-center mt-20 text-slate-200 relative bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-                    backdrop-saturate-150">
+    <div class="flex flex-col items-center justify-center mt-10 text-slate-200 relative bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+                    backdrop-saturate-150 p-2">
 
-      <!-- Élément 1 -->
-      <div class="flex items-center relative mt-[3em]">
-        <!-- Bloc logo -->
-        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-                    backdrop-saturate-150 border border-2 border-white/10
-                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden ml-2 md:ml-0
-                    fill-green-900 drop-shadow-lg drop-shadow-green-900/40">
-          <img src="/chatgpt_icon.webp" alt="ChatGPT Icon"
-              class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
-        </div>
+        <!-- Élément 1 -->
+        <div class="flex justify-center mt-8 relative">
+          <!-- Card principale -->
+          <div
+            class="relative z-10 flex items-start gap-4 max-w-md w-full
+                  bg-black/20 border border-white/10 rounded-2xl p-6
+                  backdrop-blur-md backdrop-saturate-150
+                  shadow-lg shadow-green-900/5">
+            <!-- Logo -->
+            <div
+              class="flex-shrink-0 flex items-center justify-center
+                    h-14 w-14 rounded-xl bg-green-500/10 border border-green-500/20
+                    shadow-inner shadow-green-400/20">
+              <img
+                src="/chatgpt_icon.webp"
+                alt="Icône ChatGPT"
+                class="h-8 w-8 object-contain drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]"
+              />
+            </div>
 
-        <!-- Câble horizontal -->
-        <div class="w-16 h-[2px] bg-gradient-to-r from-green-400/50 to-emerald-500/40 relative overflow-hidden mx-2">
-          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal"></span>
-        </div>
+              <!-- Contenu texte -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-semibold text-green-400 leading-tight">
+                  Automatisation intelligente
+                </h3>
+                <p class="text-slate-400 text-sm mt-1 leading-relaxed">
+                  ChatGPT analyse vos besoins et automatise la création de contenu ou vos campagnes publicitaires.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Texte -->
-        <div class="max-w-sm">
-          <h3 class="text-lg font-semibold text-green-400">Automatisation intelligente</h3>
-          <p class="text-slate-400 text-sm p-2">
-            ChatGPT analyse vos besoins et automatise la création de contenu ou de campagnes publicitaires.
-          </p>
-        </div>
-      </div>
 
-      <!-- Câble vertical -->
-      <div class="relative w-[2px] h-16 bg-gradient-to-b from-green-500/30 to-blue-400/30 my-4 overflow-hidden rounded-full">
-        <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
-      </div>
+            <div
+            class="relative w-[2px] h-16 mx-auto
+                  bg-gradient-to-b from-green-500/30 to-blue-400/30 to-white/20
+                  overflow-hidden rounded-full shadow-[0_0_8px_rgba(139,92,246,0.3)]">
+            <span
+              class="absolute left-0 top-0 w-full h-4
+                    bg-white/70 rounded-full
+                    animate-flow-vertical"
+            ></span>
+          </div>
+
 
       <!-- Élément 2 -->
-      <div class="flex items-center relative">
-        <!-- Bloc logo -->
-        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-                    backdrop-saturate-150 border border-2 border-white/10
-                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden ml-2 md:ml-0
-                    fill-purple-900 drop-shadow-lg drop-shadow-purple-900/40">
-          <img src="/google_ads_icon.png" alt="Google Ads Logo"
-              class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">
-        </div>
+      <div class="flex justify-center  relative">
+        <!-- Card principale -->
+        <div
+          class="relative z-10 flex items-start gap-4 max-w-md w-full
+                bg-black/20 border border-white/10 rounded-2xl p-6
+                backdrop-blur-md backdrop-saturate-150
+                shadow-lg shadow-blue-900/5">
+          <!-- Logo -->
+          <div
+            class="flex-shrink-0 flex items-center justify-center
+                  h-14 w-14 rounded-xl bg-blue-500/10 border border-blue-500/20
+                  shadow-inner shadow-blue-400/20" >
+            <img
+              src="/google_ads_icon.png"
+              alt="Logo Google Ads"
+              class="h-8 w-8 object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
+            />
+          </div>
 
-        <!-- Câble horizontal -->
-        <div class="w-16 h-[2px] bg-gradient-to-r from-blue-400/50 to-indigo-500/50 relative overflow-hidden mx-2">
-          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal"></span>
-        </div>
-
-        <!-- Texte -->
-        <div class="max-w-sm">
-          <h3 class="text-lg font-semibold text-blue-400">Campagnes Google Ads</h3>
-          <p class="text-slate-400 text-sm p-2">
-            Configuration, suivi et optimisation de vos annonces pour maximiser le retour sur investissement.
-          </p>
+          <!-- Contenu texte -->
+          <div class="flex flex-col justify-center">
+            <h3 class="text-lg font-semibold text-blue-400 leading-tight">
+              Campagnes Google Ads
+            </h3>
+            <p class="text-slate-400 text-sm mt-1 leading-relaxed">
+              Configuration, suivi et optimisation de vos annonces pour maximiser le retour sur investissement.
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- Câble vertical -->
-      <div class="relative w-[2px] h-16 bg-gradient-to-b from-indigo-500/30 to-white/30 my-4 overflow-hidden rounded-full">
-        <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
+      <div
+        class="relative w-[2px] h-16 mx-auto
+              bg-gradient-to-b from-indigo-500/40 via-purple-400/30 to-white/20
+              overflow-hidden rounded-full shadow-[0_0_8px_rgba(139,92,246,0.3)]">
+        <span
+          class="absolute left-0 top-0 w-full h-4
+                bg-white/70 rounded-full
+                animate-flow-vertical"
+        ></span>
       </div>
 
       <!-- Élément 3 -->
-      <div class="flex items-center relative">
-        <!-- Bloc logo -->
-        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-                    backdrop-saturate-150 border border-2 border-white/10
-                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden ml-2 md:ml-0
-                    fill-white drop-shadow-lg drop-shadow-white/40">
-          <i-lucide [img]="MegaphoneIcon" [size]="56"></i-lucide>
-        </div>
+      <div class="flex justify-center relative mb-5">
+        <!-- Card principale -->
+        <div
+          class="relative z-10 flex items-start gap-4 max-w-md w-full
+                bg-black/20 border border-white/10 rounded-2xl p-6
+                backdrop-blur-md backdrop-saturate-150
+                shadow-lg shadow-pink-900/5">
+          <!-- Logo -->
+          <div
+            class="flex-shrink-0 flex items-center justify-center
+                  h-14 w-14 rounded-xl bg-pink-500/10 border border-pink-500/20
+                  shadow-inner shadow-pink-400/20">
+            <i-lucide [img]="MegaphoneIcon" [size]="28" class="text-pink-400 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
+          </div>
 
-        <!-- Câble horizontal -->
-        <div class="w-16 h-[2px] bg-gradient-to-r from-purple-500/50 to-pink-500/50 relative overflow-hidden mx-2">
-          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal "></span>
-        </div>
-
-        <!-- Texte -->
-        <div class="max-w-sm">
-          <h3 class="text-lg font-semibold text-pink-400">Diffusion & croissance</h3>
-          <p class="text-slate-400 text-sm p-2">
-            Vos campagnes se propagent sur le web et les réseaux sociaux avec un suivi précis des performances.
-          </p>
+          <!-- Contenu texte -->
+          <div class="flex flex-col justify-center">
+            <h3 class="text-lg font-semibold text-pink-400 leading-tight">
+              Diffusion & croissance
+            </h3>
+            <p class="text-slate-400 text-sm mt-1 leading-relaxed">
+              Vos campagnes se propagent sur le web et les réseaux sociaux avec un suivi précis des performances.
+            </p>
+          </div>
         </div>
       </div>
+
 
     </div>
 
