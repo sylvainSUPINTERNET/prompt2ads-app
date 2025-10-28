@@ -19,6 +19,17 @@
   animation: flow-vertical 3s linear infinite;
 }
 
+@keyframes flow-horizontal {
+  0%   { left: 0; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.animate-flow-horizontal {
+  animation: flow-horizontal 3s linear infinite;
+}
+
 
 @keyframes gloss {
   0% { transform: translateX(-100%) rotate(25deg); opacity: 0; }
@@ -29,3 +40,5 @@
 .animate-gloss {
   animation: gloss 4s ease-in-out infinite;
 }
+
+

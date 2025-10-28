@@ -1,6 +1,6 @@
 <div class="relative min-h-screen bg-black overflow-hidden">
   <!-- Halo -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.1),transparent_70%)] pointer-events-none"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.2),transparent_60%)] pointer-events-none"></div>
 
   <!-- content -->
   <div>
@@ -30,46 +30,137 @@
           <p class="text-slate-200 text-center text-lg md:text-xl mt-[0.6em]">Generate full Google Ads campaigns in seconds</p>
       </div>
     </div>
-    
-    <div class="flex flex-col items-center justify-center mt-[3em] bg-black">
-      
-      <div class="relative z-10 text-slate-200
-          bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-          backdrop-saturate-150 border border-2 border-white/10
-          fill-green-900 drop-shadow-lg drop-shadow-green-900/40
-          rounded-xl p-4 w-[150px] flex justify-center
-          overflow-hidden">
-        <img src="/chatgpt_icon.webp" alt="Google Ads Logo" class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+
+
+
+
+    <div class="flex flex-col items-center justify-center mt-20 text-slate-200 relative bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+                    backdrop-saturate-150">
+
+      <!-- Élément 1 -->
+      <div class="flex items-center relative mt-[3em]">
+        <!-- Bloc logo -->
+        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+                    backdrop-saturate-150 border border-2 border-white/10
+                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden">
+          <img src="/chatgpt_icon.webp" alt="ChatGPT Icon"
+              class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+        </div>
+
+        <!-- Câble horizontal -->
+        <div class="w-16 h-[2px] bg-gradient-to-r from-green-400/50 to-emerald-500/40 relative overflow-hidden mx-2">
+          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal"></span>
+        </div>
+
+        <!-- Texte -->
+        <div class="max-w-sm">
+          <h3 class="text-lg font-semibold text-green-400">Automatisation intelligente</h3>
+          <p class="text-slate-400 text-sm">
+            ChatGPT analyse vos besoins et automatise la création de contenu ou de campagnes publicitaires.
+          </p>
+        </div>
       </div>
 
-      <div class="relative w-[2px] h-30 bg-gradient-to-b from-purple-600/40 to-indigo-500/40 overflow-hidden rounded-full fill-white drop-shadow-lg drop-shadow-white">
-         <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
-      </div>
-      
-      <div class="relative z-10 text-slate-200
-          bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-          backdrop-saturate-150 border border-2 border-white/10
-          fill-blue-900 drop-shadow-lg drop-shadow-blue-900/40
-          rounded-xl p-4 w-[150px] flex justify-center
-          overflow-hidden">
-        <img src="/google_ads_icon.png" alt="Google Ads Logo" class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+      <!-- Câble vertical -->
+      <div class="relative w-[2px] h-16 bg-gradient-to-b from-green-500/30 to-blue-400/30 my-4 overflow-hidden rounded-full">
+        <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
       </div>
 
-      <div class="relative w-[2px] h-30 bg-gradient-to-b from-purple-600/40 to-indigo-500/40 overflow-hidden rounded-full fill-white drop-shadow-lg drop-shadow-white">
-         <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
+      <!-- Élément 2 -->
+      <div class="flex items-center relative">
+        <!-- Bloc logo -->
+        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+                    backdrop-saturate-150 border border-2 border-white/10
+                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden">
+          <img src="/google_ads_icon.png" alt="Google Ads Logo"
+              class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">
+        </div>
+
+        <!-- Câble horizontal -->
+        <div class="w-16 h-[2px] bg-gradient-to-r from-blue-400/50 to-indigo-500/50 relative overflow-hidden mx-2">
+          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal"></span>
+        </div>
+
+        <!-- Texte -->
+        <div class="max-w-sm">
+          <h3 class="text-lg font-semibold text-blue-400">Campagnes Google Ads</h3>
+          <p class="text-slate-400 text-sm">
+            Configuration, suivi et optimisation de vos annonces pour maximiser le retour sur investissement.
+          </p>
+        </div>
       </div>
 
-      <div class="relative z-10 text-slate-200
-          bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
-          backdrop-saturate-150 border border-2 border-white/10
-          fill-white drop-shadow-lg drop-shadow-white/40
-          rounded-xl p-4 w-[150px] flex justify-center
-          overflow-hidden">
-            <i-lucide [img]="MegaphoneIcon" [size]="56"></i-lucide>
+      <!-- Câble vertical -->
+      <div class="relative w-[2px] h-16 bg-gradient-to-b from-indigo-500/30 to-white/30 my-4 overflow-hidden rounded-full">
+        <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
       </div>
 
+      <!-- Élément 3 -->
+      <div class="flex items-center relative">
+        <!-- Bloc logo -->
+        <div class="relative z-10 bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+                    backdrop-saturate-150 border border-2 border-white/10
+                    rounded-xl p-4 w-[150px] flex justify-center overflow-hidden">
+          <i-lucide [img]="MegaphoneIcon" [size]="56"></i-lucide>
+        </div>
+
+        <!-- Câble horizontal -->
+        <div class="w-16 h-[2px] bg-gradient-to-r from-purple-500/50 to-pink-500/50 relative overflow-hidden mx-2">
+          <span class="absolute left-0 top-0 w-6 h-full bg-white/70 rounded-full animate-flow-horizontal"></span>
+        </div>
+
+        <!-- Texte -->
+        <div class="max-w-sm">
+          <h3 class="text-lg font-semibold text-pink-400">Diffusion & croissance</h3>
+          <p class="text-slate-400 text-sm">
+            Vos campagnes se propagent sur le web et les réseaux sociaux avec un suivi précis des performances.
+          </p>
+        </div>
+      </div>
 
     </div>
+
+
+
+
+      <!-- <div class="flex flex-col items-center justify-center mt-[3em] bg-black">
+        <div class="relative z-10 text-slate-200
+            bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+            backdrop-saturate-150 border border-2 border-white/10
+            fill-green-900 drop-shadow-lg drop-shadow-green-900/40
+            rounded-xl p-4 w-[150px] flex justify-center
+            overflow-hidden">
+          <img src="/chatgpt_icon.webp" alt="Google Ads Logo" class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+        </div>
+
+        <div class="relative w-[2px] h-30 bg-gradient-to-b from-purple-600/40 to-indigo-500/40 overflow-hidden rounded-full fill-white drop-shadow-lg drop-shadow-white">
+          <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
+        </div>
+        
+        <div class="relative z-10 text-slate-200
+            bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+            backdrop-saturate-150 border border-2 border-white/10
+            fill-blue-900 drop-shadow-lg drop-shadow-blue-900/40
+            rounded-xl p-4 w-[150px] flex justify-center
+            overflow-hidden">
+          <img src="/google_ads_icon.png" alt="Google Ads Logo" class="h-12 mt-2 mb-4 drop-shadow-[0_0_10px_rgba(139,92,246,0.3)]">
+        </div>
+
+        <div class="relative w-[2px] h-30 bg-gradient-to-b from-purple-600/40 to-indigo-500/40 overflow-hidden rounded-full fill-white drop-shadow-lg drop-shadow-white">
+          <span class="absolute left-0 top-0 w-full h-4 bg-white/70 rounded-full animate-flow-vertical"></span>
+        </div>
+
+        <div class="relative z-10 text-slate-200
+            bg-black/10 supports-[backdrop-filter]:backdrop-blur-md
+            backdrop-saturate-150 border border-2 border-white/10
+            fill-white drop-shadow-lg drop-shadow-white/40
+            rounded-xl p-4 w-[150px] flex justify-center
+            overflow-hidden">
+              <i-lucide [img]="MegaphoneIcon" [size]="56"></i-lucide>
+        </div>
+      </div>
+     -->
+
     
   </div>
 
