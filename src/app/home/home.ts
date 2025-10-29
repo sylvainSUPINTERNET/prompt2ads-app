@@ -48,6 +48,14 @@ export class Home {
   }
 
   showBurger() {
-    this.mobileMenu.nativeElement.classList.toggle("hidden");
+    if ( this.mobileMenu?.nativeElement ) {
+      this.mobileMenu.nativeElement.classList.toggle("hidden");
+    }
+  }
+
+  closeMenu() {
+    if ( this.mobileMenu?.nativeElement ) {
+      this.mobileMenu.nativeElement.classList.add("hidden");
+    }
   }
 }

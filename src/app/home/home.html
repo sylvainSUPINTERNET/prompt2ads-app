@@ -33,10 +33,10 @@
 
   <!-- Mobile Dropdown -->
   <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-black/40 backdrop-blur-md border-t border-white/20" #mobileMenu>
-    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10">Home</a>
-    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10">Services</a>
-    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10">About</a>
-    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10">Contact</a>
+    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10" (click)="closeMenu()">Home</a>
+    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10" (click)="closeMenu()">Services</a>
+    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10" (click)="closeMenu()">About</a>
+    <a href="#" class="py-3 text-white w-full text-center hover:bg-white/10" (click)="closeMenu()">Contact</a>
   </div>
   <div
   id="mobile-menu"
@@ -81,7 +81,7 @@
     <div class="flex justify-center mt-[3em] p-2 gap-4">
       <button class="
         flex items-center gap-2
-        text-slate-200 text-md md:text-2xl font-medium
+        text-slate-200 text-xl md:text-2xl font-medium
         bg-gradient-to-t from-black/10 via-purple-700/10 to-black/10
         supports-[backdrop-filter]:backdrop-blur-md backdrop-saturate-150
         border border-white/5
@@ -127,7 +127,7 @@
               <!-- Contenu texte -->
               <div class="flex flex-col justify-center">
                 <h3 class="text-lg font-semibold text-green-400 leading-tight">
-                  Automatisation intelligente
+                  Smart Automation
                 </h3>
                 <p class="text-slate-400 text-sm mt-1 leading-relaxed">
                   ChatGPT analyzes your needs and automates the creation of your advertising campaigns
@@ -172,7 +172,7 @@
           <!-- Contenu texte -->
           <div class="flex flex-col justify-center">
             <h3 class="text-lg font-semibold text-blue-400 leading-tight">
-              Campagnes Google Ads
+              Google Ads Campaigns
             </h3>
             <p class="text-slate-400 text-sm mt-1 leading-relaxed">
               Setup, monitoring, and optimization of your ads to maximize return on investment
@@ -211,7 +211,7 @@
           <!-- Contenu texte -->
           <div class="flex flex-col justify-center">
             <h3 class="text-lg font-semibold text-pink-400 leading-tight">
-              Diffusion & croissance
+              Delivery & Growth
             </h3>
             <p class="text-slate-400 text-sm mt-1 leading-relaxed">
               Manage your campaigns easily and generate leads to grow your business
