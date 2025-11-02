@@ -27,8 +27,11 @@ export class Customer {
   ));
 
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { 
-}
+  getCustomerInfo(customerId: string) {
+    alert(customerId);
+  }
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
   
   // ngOnInit() {
   //   effect(() => {
