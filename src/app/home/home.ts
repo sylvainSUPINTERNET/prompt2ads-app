@@ -3,6 +3,7 @@ import { Component, effect, ElementRef, Inject, PLATFORM_ID, signal, ViewChild }
 import { animate } from 'motion';
 import { Customer } from "../customer/customer";
 import { LucideAngularModule, BubblesIcon, MegaphoneIcon, View } from 'lucide-angular';
+import { httpResource } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -21,18 +22,19 @@ export class Home {
   
   protected readonly title = signal('prompt2ads-app');
 
-  user = signal<null | {id:string}>(null);
+  // user = signal<null | {id:string}>(null);
+
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    effect(() => {
-      if (isPlatformBrowser(this.platformId)) {
-        (async () => {
-          const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-          const data = await res.json();
-          setTimeout(() => this.user.set(data), 2000);
-        })();
-      }
-    });
+    // effect(() => {
+    //   if (isPlatformBrowser(this.platformId)) {
+    //     (async () => {
+    //       const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    //       const data = await res.json();
+    //       setTimeout(() => this.user.set(data), 9000);
+    //     })();
+    //   }
+    // });
   }
 
   ngAfterViewInit() {

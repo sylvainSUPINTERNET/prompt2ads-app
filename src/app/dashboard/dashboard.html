@@ -1,0 +1,11 @@
+<div>
+
+    @if(customerIds.hasValue()) {
+    <!-- <user-details [user]="user.value()"> -->
+        <p>{{customerIds.value() | json}}</p>
+    } @else if (customerIds.error()) {
+    <div>Could not load user information</div>
+    } @else if (customerIds.isLoading()) {
+    <div>Loading user info...</div>
+    }
+</div>
