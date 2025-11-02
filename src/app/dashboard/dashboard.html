@@ -1,28 +1,6 @@
 <div>
-
-    <div class="flex items-center justify-center h-screen 
-                bg-gradient-to-br from-black via-neutral-900 to-slate-900">
-        
-        <div class="bg-white/1 text-white p-8 rounded-2xl
-                    backdrop-blur-md backdrop-saturate-150
-                    shadow-lg">
-            <h1 class="text-2xl font-semibold mb-2">Select Customer</h1>
-            <div class="text-white/80">
-                
-                @if(customerIds.hasValue()) {
-                    <p>{{customerIds.value() | json}}</p>
-                } @else if (customerIds.error()) {
-                    <div>Could not load user information</div>
-                } @else if (customerIds.isLoading()) {
-                    <div>Loading user info...</div>
-                }
-            </div>
-        </div>
-
-
-  
+    <div class="flex h-screen 
+                bg-gradient-to-br from-black via-neutral-900 to-slate-900 p-3 md:p-0">  
+        <p>Dashboard</p>
     </div>
-
-
-
 </div>

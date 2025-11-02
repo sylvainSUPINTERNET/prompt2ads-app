@@ -1,28 +1,33 @@
 import { isPlatformBrowser, JsonPipe } from '@angular/common';
-import { httpResource } from '@angular/common/http';
+import { httpResource, HttpResourceRef } from '@angular/common/http';
 import { Component, effect, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { environment } from '../../environments/environment';
-
+import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [JsonPipe],
+  imports: [JsonPipe, LucideAngularModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
 export class Dashboard {
-  customerIds = httpResource(() => (
+  
+  readonly ArrowRightIcon = ArrowRightIcon;
+
+  customerIdsResource:any = httpResource(() => (
       {
-      url: `${environment.apiUrl}/customers`,
-      headers: {
-        "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62"
-      }
+        method: 'GET',
+        url: `${environment.apiUrl}/customers`,
+        headers: {
+          "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62"
+        },
+        timeout: 30000
     }
   ));
 
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { 
-  }
+}
   
   // ngOnInit() {
   //   effect(() => {
