@@ -5,11 +5,13 @@ import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
 import { environment } from '../../environments/environment';
 import { CustomLoader } from "../custom-loader/custom-loader";
 import { CustomError } from "../custom-error/custom-error";
+import { CustomCancelBtn } from "../custom-cancel-btn/custom-cancel-btn";
+import { CustomConfirmBtn } from "../custom-confirm-btn/custom-confirm-btn";
 
 
 @Component({
   selector: 'app-customer',
-  imports: [JsonPipe, LucideAngularModule, CustomLoader, CustomError],
+  imports: [JsonPipe, LucideAngularModule, CustomLoader, CustomError, CustomCancelBtn, CustomConfirmBtn],
   templateUrl: './customer.html',
   styleUrl: './customer.css',
 })
@@ -31,7 +33,7 @@ export class Customer {
     }
   ));
 
-   customerInfo = httpResource(() => (
+   customerInfo:any = httpResource(() => (
       {
         method: 'GET',
         url: `${environment.apiUrl}/customers/validate`,

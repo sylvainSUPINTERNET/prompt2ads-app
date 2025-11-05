@@ -1,3 +1,14 @@
-    <div class="text-md text-red-600 rounded-lg font-medium" role="alert">
-        {{errorMessage}}
-    </div>
+<div
+  class="mt-4 flex items-center gap-3 px-4 py-3 rounded-xl
+         bg-red-500/10 border border-red-500/30 text-red-300
+         backdrop-blur-md backdrop-saturate-150 shadow-inner
+         transition-all duration-200" 
+         role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-red-400 flex-shrink-0"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z" />
+            </svg>
+            <span class="text-sm font-medium tracking-wide">{{ errorMessage }}</span>
+</div>
