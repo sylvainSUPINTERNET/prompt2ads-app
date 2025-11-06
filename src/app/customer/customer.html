@@ -37,7 +37,7 @@
                                         </div>
                                         <div class="flex justify-center items-center gap-4">
                                             <app-custom-cancel-btn (close)="closeCustomerInfo()"></app-custom-cancel-btn>
-                                            <app-custom-confirm-btn [path]="'/dashboard'" [buttonText]="'Confirm'"></app-custom-confirm-btn>
+                                            <app-custom-confirm-btn [path]="'/dashboard'" [buttonText]="'Continue'"></app-custom-confirm-btn>
                                         </div>
                                     </div>
                                 }
@@ -105,7 +105,7 @@
                             </app-custom-error>
                         </div>
                     } @else if (customerIdsResource.isLoading()) {
-                        <div class="justify-center flex mt-[3em]">
+                        <div class="justify-center flex mb-[3em]">
                             <app-custom-loader 
                                 [srMessage]="'Loading customer IDs...'"></app-custom-loader>
                         </div>
