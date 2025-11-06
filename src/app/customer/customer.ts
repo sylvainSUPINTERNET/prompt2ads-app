@@ -1,12 +1,13 @@
 import { JsonPipe } from '@angular/common';
 import { httpResource } from '@angular/common/http';
-import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
 import { environment } from '../../environments/environment';
 import { CustomLoader } from "../custom-loader/custom-loader";
 import { CustomError } from "../custom-error/custom-error";
 import { CustomCancelBtn } from "../custom-cancel-btn/custom-cancel-btn";
 import { CustomConfirmBtn } from "../custom-confirm-btn/custom-confirm-btn";
+import { animate } from 'motion';
 
 
 @Component({
@@ -17,6 +18,10 @@ import { CustomConfirmBtn } from "../custom-confirm-btn/custom-confirm-btn";
 })
 export class Customer {
   
+  @ViewChild('divCustomerInfo') divCustomerInfo!: ElementRef;
+  @ViewChild('customerTitleContainer') customerTitleContainer!: ElementRef;
+  @ViewChild('divCustomerInfoResult') divCustomerInfoResult!: ElementRef;
+
   isShown = signal<boolean>(false);
   customerId = signal<string>('');
 
@@ -46,13 +51,45 @@ export class Customer {
   ));
 
 
+  
+
   getCustomerInfo(customerId: string) {
+
+    if (this.divCustomerInfo?.nativeElement) {
+      animate(this.divCustomerInfo.nativeElement, 
+        { opacity: [1, 0], x: [0, 50] },
+        { duration: 0.2 }
+      );
+    }
+
+    if ( this.customerTitleContainer?.nativeElement) {
+      animate(this.customerTitleContainer.nativeElement,
+        { opacity: [1, 0], x: [0, 50] },
+        { duration: 0.2 }
+      );
+    }
+
     this.customerId.set(customerId);
+    
     this.customerInfo.reload();
     this.isShown.update((isShown) => true);
   }
 
   closeCustomerInfo() {
+    if (this.divCustomerInfo?.nativeElement) {
+      animate(this.divCustomerInfo.nativeElement, 
+        { opacity: [0, 1], x: [50, 0] },
+        { duration: 0.2 }
+      );
+    }
+
+    if (this.customerTitleContainer?.nativeElement) {
+      animate(this.customerTitleContainer.nativeElement, 
+        { opacity: [0, 1], x: [50, 0] },
+        { duration: 0.2 }
+      );
+    }
+
     this.isShown.update((isShown) => false);
   }
 
