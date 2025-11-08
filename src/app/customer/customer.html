@@ -37,7 +37,7 @@
                                         </div>
                                         <div class="flex justify-center items-center gap-4">
                                             <app-custom-cancel-btn (close)="closeCustomerInfo()"></app-custom-cancel-btn>
-                                            <app-custom-confirm-btn [path]="'/dashboard'" [buttonText]="'Continue'"></app-custom-confirm-btn>
+                                            <app-custom-confirm-btn (confirm)="confirm()" [path]="'/dashboard'" [buttonText]="'Continue'"></app-custom-confirm-btn>
                                         </div>
                                     </div>
                                 }

@@ -50,7 +50,12 @@ export class Customer {
       }
   ));
 
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
+  confirm() {
+    sessionStorage.setItem('google_customer_id', this.customerId());
+  }
   
 
   getCustomerInfo(customerId: string) {
@@ -93,7 +98,6 @@ export class Customer {
     this.isShown.update((isShown) => false);
   }
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
   
   // ngOnInit() {
   //   effect(() => {
