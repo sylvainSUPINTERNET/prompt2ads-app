@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+
+@layer components  {
+    .frosted-card {
+        @apply border-white/10 bg-white/1 text-white p-8 rounded-2xl backdrop-blur-md backdrop-saturate-150 shadow-lg; 
+    }
+}

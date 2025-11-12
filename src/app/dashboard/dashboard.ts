@@ -3,10 +3,11 @@ import { httpResource, HttpResourceRef } from '@angular/common/http';
 import { Component, effect, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
+import { ProjectCreate } from "../project-create/project-create";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [JsonPipe, LucideAngularModule],
+  imports: [JsonPipe, LucideAngularModule, ProjectCreate],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
