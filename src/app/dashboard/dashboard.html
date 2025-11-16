@@ -1,8 +1,59 @@
-<div>
-    <div class="h-screen 
-                bg-gradient-to-br from-black via-neutral-900 to-slate-900 p-3 md:p-0">  
-        <div>
-            <app-project-create></app-project-create>
+<div class="h-screen 
+            bg-gradient-to-br from-black via-neutral-900 to-slate-900 p-3 md:p-0">
+
+
+
+
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/20 border-b border-slate-600/20 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+            <div class="flex items-center">
+                <img class="h-12 w-12" src="/prompt2ads_logo.png" alt="Prompt2Ads Logo">
+                <span class="hidden md:block text-md font-medium text-white tracking-wide">Prompt2Ads</span>
+            </div>
+
+            <div>
+                @if( userInfoResource.hasValue() ) {
+                    <nav class="flex space-x-8 text-white/90 font-medium">
+                        <div class="flex gap-2">
+                            <div class="relative w-12 h-12 cursor-pointer">
+                                <div class="absolute inset-0 rounded-full 
+                                    bg-gradient-to-tr from-black via-purple-900/40 to-black 
+                                    blur-md opacity-60">
+                                </div>
+                                <div class="absolute inset-0 rounded-full 
+                                    border border-purple-800/40 
+                                    ring-1 ring-purple-900/40
+                                    shadow-[0_0_12px_rgba(88,28,135,0.35)]">
+                                </div>
+                                <img
+                                    class="relative w-12 h-12 rounded-full object-cover 
+                                    border border-purple-900/60 shadow-[0_0_6px_rgba(88,28,135,0.3)]"
+                                    [src]="userInfoResource.value().picture"
+                                />
+                            </div>
+                        </div>
+                    </nav>
+                } @else if (userInfoResource.isLoading()) {
+                    <app-custom-loader 
+                        [srMessage]="'Loading customer information...'">
+                    </app-custom-loader>
+                } @else if (userInfoResource.error()) {
+                    @let errorProfile = getProfileError(userInfoResource.error());
+
+                    <app-custom-error 
+                        [errorMessage]="errorProfile">
+                    </app-custom-error>
+                }
+            </div>
+            
+
+
         </div>
+    </header>
+
+    <div class="pt-[4.5em]" #boxAnimatedTopToBottom>
+        <app-project-create></app-project-create>
     </div>
+
 </div>
+

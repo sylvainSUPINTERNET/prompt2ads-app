@@ -14,7 +14,7 @@
                             <div>
                                 @if( customerInfo.value().invalidReason !== null ) {
                                     <div class="flex items-center justify-center">
-                                        <div class="p-6 flex flex-col justify-center gap-4 text-center">
+                                        <div class="p-6 flex flex-col justify-center gap-4 text-center mt-4">
                                             <app-custom-error 
                                                 [errorMessage]="'Customer is not valid : ' + customerInfo.value().invalidReason">
                                             </app-custom-error>
@@ -45,9 +45,11 @@
                         } @else if(customerInfo.error()) {
                             <div class="flex items-center justify-center h-full">
                                 <div>
-                                    <app-custom-error 
-                                        [errorMessage]="'Failed to validate customer. Please try again.'">
-                                    </app-custom-error>
+                                    <div class="mt-4">
+                                        <app-custom-error 
+                                            [errorMessage]="'Failed to validate customer. Please try again.'">
+                                        </app-custom-error>
+                                    </div>
                                     <div class="flex justify-center my-4">
                                         <app-custom-cancel-btn (close)="closeCustomerInfo()"></app-custom-cancel-btn>
                                     </div>
@@ -56,6 +58,7 @@
                         } @else if (customerIdsResource.isLoading()) {
                             <div class="flex items-center justify-center h-full">
                                 <app-custom-loader 
+                                    [containerMarginTopEm]="3"
                                     [srMessage]="'Loading customer information...'"></app-custom-loader>
                             </div> 
                         }
@@ -100,13 +103,16 @@
                         </ul>
                     } @else if (customerIdsResource.error()) {
                         <div class="text-center mb-4">
-                            <app-custom-error 
-                                [errorMessage]="'Something wrong occured, please try again.'">
-                            </app-custom-error>
+                            <div class="mt-4">
+                                <app-custom-error 
+                                    [errorMessage]="'Something wrong occured, please try again.'">
+                                </app-custom-error>
+                            </div>
                         </div>
                     } @else if (customerIdsResource.isLoading()) {
                         <div class="justify-center flex mb-[3em]">
                             <app-custom-loader 
+                                [containerMarginTopEm]="3"
                                 [srMessage]="'Loading customer IDs...'"></app-custom-loader>
                         </div>
                     }

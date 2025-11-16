@@ -1,8 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, effect, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { animate } from 'motion';
 import { LucideAngularModule, BubblesIcon, MegaphoneIcon, View } from 'lucide-angular';
-import { httpResource } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',

@@ -10,6 +10,11 @@ export class CustomLoader {
   @Input() srMessage: string = 'Loading...';
   @Input() width = 12;
   @Input() height = 12;
+  @Input() containerMarginTopEm = 0;
+
+  get containerStyle() {
+    return `justify-center flex mt-[${this.containerMarginTopEm}em]`;
+  }
 
   get spinnerClasses() {
     return [

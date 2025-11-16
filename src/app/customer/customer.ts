@@ -30,9 +30,9 @@ export class Customer {
   customerIdsResource:any = httpResource(() => (
       {
         method: 'GET',
-        url: `${environment.apiUrl}/customers`,
+        url: `${environment.apiUrl}/api/google/customers`,
         headers: {
-          "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62"
+          "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62" // todo move this
         },
         timeout: 30000
     }
@@ -41,9 +41,9 @@ export class Customer {
    customerInfo:any = httpResource(() => (
       {
         method: 'GET',
-        url: `${environment.apiUrl}/customers/validate`,
+        url: `${environment.apiUrl}/api/google/customers/validate`,
         headers: {
-          "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62",
+          "X-Google-Session-Id": "6fe6bd99-94bc-4bce-96d6-cb359c73eb62", // todo move this
           "X-Google-Customer-Id": this.customerId()
         },
         timeout: 30000
