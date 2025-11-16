@@ -1,24 +1,27 @@
 import { isPlatformBrowser, JsonPipe } from '@angular/common';
 import { HttpErrorResponse, httpResource } from '@angular/common/http';
-import { Component, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
+import { ArrowRightIcon, LucideAngularModule} from 'lucide-angular';
 import { ProjectCreate } from "../project-create/project-create";
 import { animate } from 'motion';
 import { CustomLoader } from "../custom-loader/custom-loader";
 import { CustomError } from "../custom-error/custom-error";
+import { ProjectList } from "../project-list/project-list";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [JsonPipe, LucideAngularModule, ProjectCreate, CustomLoader, CustomError],
+  imports: [JsonPipe, LucideAngularModule, ProjectCreate, CustomLoader, CustomError, ProjectList],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
 export class Dashboard {
-  
   @ViewChild('boxAnimatedTopToBottom') boxAnimatedTopToBottom!: ElementRef;
   readonly ArrowRightIcon = ArrowRightIcon;
   // @ViewChild('boxAnimatedTopToBottomList') boxAnimatedTopToBottomList!: QueryList<ElementRef>;
+  
+  private router = inject(Router);
 
   customerIdsResource:any = httpResource(() => (
       {
@@ -59,6 +62,12 @@ export class Dashboard {
 
   getProfileError(_error: HttpErrorResponse): string {
     return 'Error, try again';
+  }
+
+  
+  navigateToNewProject() {
+    console.log('Navigating to new project creation page');
+    this.router.navigate(['/new-project']);
   }
 
 }

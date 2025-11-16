@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { ProjectList } from "../project-list/project-list";
+import { LucideAngularModule, PlusIcon } from 'lucide-angular';
 
 @Component({
   selector: 'app-project-create',
-  imports: [ProjectList],
+  imports: [LucideAngularModule],
   templateUrl: './project-create.html',
   styleUrl: './project-create.css',
 })
 export class ProjectCreate {
+  
+  navigateToNewProject() {
+    alert("click");
+  }
+  readonly plusIcon = PlusIcon;
 
 }

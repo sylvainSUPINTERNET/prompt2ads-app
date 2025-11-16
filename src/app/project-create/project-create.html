@@ -1,12 +1,26 @@
+<!-- <div>
+    <div (click)="navigateToNewProject()" 
+        class="
+            flex 
+            p-3 
+            frosted-card 
+            justify-center 
+            items-center 
+            cursor-pointer 
+            hover:shadow-sm 
+            hover:shadow-black/50 
+            hover:scale-105 
+            transition-transform 
+            duration-200 
+            ease-in-out"
+        >
+        <i-lucide [img]="plusIcon" [size]="28" class="text-purple-400/80 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
+    </div>
+</div> -->
+
 <div>
-    <div class="flex justify-center">
-        <div class="mt-5 frosted-card p-8 max-w-6xl w-full">
-            <div class="frosted-card p-8">
-                <p class="text-white text-xl md:text-2xl font-semibold">Create new project</p>
-                <div class="mt-5 p-3 md:p-8">
-                    <app-project-list></app-project-list>
-                </div>
-            </div>
-        </div>
+    <div (click)="navigateToNewProject()" class="cursor-pointer bg-red-600">
+        <i-lucide [img]="plusIcon" [size]="28" class="inline-block mr-2 text-purple-400/80 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
+        <span class="items-center">Create New Project</span>
     </div>
 </div>

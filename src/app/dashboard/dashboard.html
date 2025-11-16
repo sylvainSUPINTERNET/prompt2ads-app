@@ -1,11 +1,9 @@
 <div class="h-screen 
             bg-gradient-to-br from-black via-neutral-900 to-slate-900 p-3 md:p-0">
 
-
-
-
     <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/20 border-b border-slate-600/20 shadow-lg">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+
             <div class="flex items-center">
                 <img class="h-12 w-12" src="/prompt2ads_logo.png" alt="Prompt2Ads Logo">
                 <span class="hidden md:block text-md font-medium text-white tracking-wide">Prompt2Ads</span>
@@ -46,13 +44,24 @@
                 }
             </div>
             
-
-
         </div>
     </header>
 
     <div class="pt-[4.5em]" #boxAnimatedTopToBottom>
-        <app-project-create></app-project-create>
+        <div>
+            <div class="flex justify-center">
+                <div class="mt-5 frosted-card p-8 max-w-6xl w-full">
+                    <div class="frosted-card p-8">
+                        <p class="text-white text-xl md:text-2xl font-semibold">Create new project</p>
+                        <app-project-create></app-project-create>
+                        <app-project-list></app-project-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- 
+
+        <app-project-list></app-project-list> -->
     </div>
 
 </div>
