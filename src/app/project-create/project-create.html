@@ -18,9 +18,13 @@
     </div>
 </div> -->
 
-<div>
-    <div (click)="navigateToNewProject()" class="cursor-pointer bg-red-600">
-        <i-lucide [img]="plusIcon" [size]="28" class="inline-block mr-2 text-purple-400/80 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
-        <span class="items-center">Create New Project</span>
+<div class="flex gap-2 justify-center justify-between p-4 mb-5">
+    <div (click)="navigateToNewProject()" class="cursor-pointer text-xs frosted-card p-2 font-semibold">
+        <i-lucide [img]="plusIcon" [size]="16" class="inline-block mr-1 text-purple-400/80 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
+        <span class="items-center">Project</span>
+    </div>
+    <div (click)="navigateToNewProject()" class="cursor-pointer text-xs frosted-card p-2 font-semibold">
+        <i-lucide [img]="plusIcon" [size]="16" class="inline-block mr-1 text-purple-400/80 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i-lucide>
+        <span class="items-center">Action2</span>
     </div>
 </div>
