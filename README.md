@@ -1,3 +1,18 @@
+| Rôle                              | Couleur         | Code      |
+| --------------------------------- | --------------- | --------- |
+| **Background**                    | Blanc cassé     | `#F7F9FA` |
+| **Surface / Cards**               | Blanc pur       | `#FFFFFF` |
+| **Neutral 700** (text principal)  | Gris anthracite | `#1F2933` |
+| **Neutral 500** (text secondaire) | Gris moyen      | `#6B7280` |
+| **Primary** (actions/menus)       | Bleu chantier   | `#2563EB` |
+| **Primary hover**                 | Bleu + foncé    | `#1D4ED8` |
+| **Secondary**                     | Gris acier      | `#4B5563` |
+| **Success**                       | Vert chantier   | `#22C55E` |
+| **Warning**                       | Jaune sécurité  | `#FACC15` |
+| **Danger**                        | Rouge alerte    | `#DC2626` |
+| **Divider**                       | Gris clair      | `#E5E7EB` |
+
+
 # Prompt2adsApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.

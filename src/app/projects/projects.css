@@ -1,0 +1,18 @@
+.input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.input:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' stroke='black' stroke-width='2' viewBox='0 0 24 24' fill='none'><line x1='6' y1='6' x2='18' y2='18'/><line x1='6' y1='18' x2='18' y2='6'/></svg>") center no-repeat;
+  cursor: pointer;
+}

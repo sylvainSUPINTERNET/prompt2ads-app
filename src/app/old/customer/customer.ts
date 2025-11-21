@@ -2,7 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { httpResource } from '@angular/common/http';
 import { Component, ElementRef, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
 import { ArrowRightIcon, LucideAngularModule } from 'lucide-angular';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { CustomLoader } from "../custom-loader/custom-loader";
 import { CustomError } from "../custom-error/custom-error";
 import { CustomCancelBtn } from "../custom-cancel-btn/custom-cancel-btn";

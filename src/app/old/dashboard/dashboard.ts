@@ -1,7 +1,7 @@
 import { isPlatformBrowser, JsonPipe } from '@angular/common';
 import { HttpErrorResponse, httpResource } from '@angular/common/http';
 import { Component, ElementRef, inject, Inject, PLATFORM_ID, signal, ViewChild } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { ArrowRightIcon, LucideAngularModule} from 'lucide-angular';
 import { ProjectCreate } from "../project-create/project-create";
 import { animate } from 'motion';

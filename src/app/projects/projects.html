@@ -1,0 +1,106 @@
+<div class="min-h-screen h-screen bg-white">
+
+
+    <div class="bg-red-200 mx-auto container">
+
+        <div class="flex gap-2 justify-center items-center md:justify-start">
+            <!-- search btn -->
+            <div class="relative">
+                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8" stroke-width="2"/>
+                    <path d="m21 21-4.3-4.3" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input
+                    type="search"
+                    placeholder="Search"
+                    class="w-full border border-gray-600 bg-transparent rounded-lg py-2 pl-10 pr-3
+                        text-black placeholder-gray-400
+                        focus:outline-none hover:placeholder-black"
+                />
+            </div>
+            <!-- end search btn -->
+
+            <div>
+                <button class="ml-4 px-4 py-2 bg-[#2563EB] text-white rounded-lg hover:bg-[#1D4ED8] cursor-pointer">
+                    New Project
+                </button>
+            </div>
+        </div>
+        
+
+        <!-- projects list -->
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-4 gap-3">
+            <div class="card bg-base-100 shadow-sm">
+                <div class="card-body">
+                    <div class="flex justify-between">
+                        <h2 class="card-title">Sample Project</h2>
+                        <div class="px-2 py-1 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] font-semibold text-white cursor-pointer">Progress</div>
+                    </div>
+                    <div class="mt-2 mb-2">
+                        <span class="font-semibold">Bid Date:</span> Nov 3rd 2023 3:45 PM
+                    </div>
+                    <div>
+                        <p class="text-gray-500">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    </div>
+
+                    <div class="card-actions mt-2 flex justify-center">
+                        <div class="flex justify-center items-center ">
+                            <button class="rounded-lg btn bg-[#2563EB] hover:bg-[#1D4ED8] text-white">
+                                <i-lucide [img]="pencilRulerIcon" [size]="16" class="inline-block"></i-lucide>
+                                Takeoffs
+                            </button>
+                        </div>
+                        <div class="flex justify-center items-center ">
+                            <button class="rounded-lg btn bg-[#2563EB] hover:bg-[#1D4ED8] text-white items-center">
+                                <i-lucide [img]="notebookPenIcon" [size]="16" class="inline-block"></i-lucide>
+                                Estimates</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end project list -->
+
+        <!-- <div>
+            <div class="grid grid-cols-6 text-xs text-slate-500 mt-4 mb-2 gap-1 uppercase text-center">
+                <div class="bg-green-200">Project Name</div>
+                <div class="bg-green-200">Status</div>
+                <div class="bg-green-200">Bid Date</div>
+                <div class="bg-green-200">Location</div>
+                <div class="bg-green-200">Assigned To</div>
+                <div class="bg-green-200">Notes</div>
+            </div>
+            <div class="grid grid-cols-1 gap-2">
+                <div class="bg-green-200">
+                    <div class="grid grid-cols-6 text-xs gap-1">
+                        <div class="bg-green-200">Project1</div>
+                        <div class="bg-green-200">Not Set</div>
+                        <div class="bg-green-200">Dateee</div>
+                        <div class="bg-green-200">Loca</div>
+                        <div class="bg-green-200">lefoudubus</div>
+                        <div class="bg-green-200">Noteeeeeees</div>
+                    </div>
+                </div>
+                <div class="bg-green-200">
+                    <div class="grid grid-cols-6 text-xs gap-1">
+                        <div class="bg-green-200">Project1</div>
+                        <div class="bg-green-200">Not Set</div>
+                        <div class="bg-green-200">Dateee</div>
+                        <div class="bg-green-200">Loca</div>
+                        <div class="bg-green-200">lefoudubus</div>
+                        <div class="bg-green-200">ezaoek aezakeoaze azoekoakz</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+    </div>
+
+</div>
+
+
