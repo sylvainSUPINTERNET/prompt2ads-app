@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PencilRulerIcon, LucideAngularModule, NotebookPenIcon } from 'lucide-angular';
+import { PencilRulerIcon, LucideAngularModule, NotebookPenIcon, EllipsisVerticalIcon } from 'lucide-angular';
 
 @Component({
   selector: 'app-projects',
@@ -10,4 +10,5 @@ import { PencilRulerIcon, LucideAngularModule, NotebookPenIcon } from 'lucide-an
 export class Projects {
   pencilRulerIcon = PencilRulerIcon;
   notebookPenIcon = NotebookPenIcon;
+  ellipsisVerticalIcon = EllipsisVerticalIcon;
 }
