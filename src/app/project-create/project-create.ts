@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LucideAngularModule, PlusIcon } from 'lucide-angular';
 
 @Component({
@@ -8,10 +8,11 @@ import { LucideAngularModule, PlusIcon } from 'lucide-angular';
   styleUrl: './project-create.css',
 })
 export class ProjectCreate {
-  
-  navigateToNewProject() {
-    alert("click");
-  }
+
   readonly plusIcon = PlusIcon;
+
+  navigateToNewProject() {
+    alert("new")
+  }
 
 }
